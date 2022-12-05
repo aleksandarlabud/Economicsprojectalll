@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Pictures </title>
+
+	<link rel="icon" href="images/star.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="index2.html"> O autoru</a>
+			<a href="index3.html">Prepričano delo</a>
+			<a href="index4.html">Slike i opis likova iz dela </a>
+			<a href="index.html" id="blog">Početna </a>
+			<a href="index5.html">Vas utisak o knjizi</a>
+		</nav>
+
+		<div id="title">
+			<h1>Lav Tolstoj  </h1>
+			<h2>autobiografija</h2>
+
+		</div>
+	</header>
+	<div class="goree">
+		<center>
+			<a class="active" href="#home">Home</a>
+			<a href="oautoru.html">O autoru</a>
+			<a href="uputstva.html">Uputstva</a>
+		</center>
+	</div>
+	<div class="galerija">
+		<div id="glavna">
+			<img src="slika1.jpg">
+		</div>
+
+		<div id="dole">
+			<img src="slika1.jpg">
+			<img src="slika2.jpg">
+			<img src="slika3.jpg">
+			<img src="slika4.jpg">
+			<img src="slika5.jpg">
+			<img src="slika6.jpg">
+			<img src="slika7.jpg">
+			<img src="slika8.jpg">
+			<img src="slika9.jpg">
+			<img src="slika10.jpg">
+			<img src="slika11.jpg">
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		var velika=document.getElementById('glavna');
+		var mala=document.getElementById('dole').getElementsByTagName('img');
+
+		for(var i =0;i<mala.length;i++)
+		{
+			mala[i].addEventListener('click',full_image);
+		}
+		function full_image(){
+			var imgSrc = this.getAttribute('src');
+			velika.innerHTML="<img src="+imgSrc+">";
+		}
+	</script>
+</body>
+</html>
